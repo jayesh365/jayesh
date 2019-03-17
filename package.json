@@ -2,9 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jayesh365.github.io/index/",
+  "homepage": "https://jayesh365.github.io",
   "dependencies": {
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.0.1github",
     "jquery": "^3.3.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
