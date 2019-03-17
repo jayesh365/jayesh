@@ -1,14 +1,14 @@
 {
-  "main.css": "/jayesh365.github.io/static/css/main.87818cbf.chunk.css",
-  "main.js": "/jayesh365.github.io/static/js/main.bf752a5e.chunk.js",
-  "main.js.map": "/jayesh365.github.io/static/js/main.bf752a5e.chunk.js.map",
-  "runtime~main.js": "/jayesh365.github.io/static/js/runtime~main.c7c805ef.js",
-  "runtime~main.js.map": "/jayesh365.github.io/static/js/runtime~main.c7c805ef.js.map",
-  "static/js/2.0b099c1a.chunk.js": "/jayesh365.github.io/static/js/2.0b099c1a.chunk.js",
-  "static/js/2.0b099c1a.chunk.js.map": "/jayesh365.github.io/static/js/2.0b099c1a.chunk.js.map",
-  "index.html": "/jayesh365.github.io/index.html",
-  "precache-manifest.67aa86c67598d66c095d93796e6db74f.js": "/jayesh365.github.io/precache-manifest.67aa86c67598d66c095d93796e6db74f.js",
-  "service-worker.js": "/jayesh365.github.io/service-worker.js",
-  "static/css/main.87818cbf.chunk.css.map": "/jayesh365.github.io/static/css/main.87818cbf.chunk.css.map",
-  "static/media/uoft.svg": "/jayesh365.github.io/static/media/uoft.11ec10a5.svg"
+  "main.css": "/static/css/main.87818cbf.chunk.css",
+  "main.js": "/static/js/main.ecd7fe0e.chunk.js",
+  "main.js.map": "/static/js/main.ecd7fe0e.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.0b099c1a.chunk.js": "/static/js/2.0b099c1a.chunk.js",
+  "static/js/2.0b099c1a.chunk.js.map": "/static/js/2.0b099c1a.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.0664a861bba19c5364934a911459f630.js": "/precache-manifest.0664a861bba19c5364934a911459f630.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.87818cbf.chunk.css.map": "/static/css/main.87818cbf.chunk.css.map",
+  "static/media/uoft.svg": "/static/media/uoft.11ec10a5.svg"
 }
