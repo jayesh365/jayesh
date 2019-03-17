@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.87818cbf.chunk.css",
-  "main.js": "/static/js/main.ecd7fe0e.chunk.js",
-  "main.js.map": "/static/js/main.ecd7fe0e.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.0b099c1a.chunk.js": "/static/js/2.0b099c1a.chunk.js",
-  "static/js/2.0b099c1a.chunk.js.map": "/static/js/2.0b099c1a.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.0664a861bba19c5364934a911459f630.js": "/precache-manifest.0664a861bba19c5364934a911459f630.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.87818cbf.chunk.css.map": "/static/css/main.87818cbf.chunk.css.map",
-  "static/media/uoft.svg": "/static/media/uoft.11ec10a5.svg"
+  "main.css": "/index/static/css/main.87818cbf.chunk.css",
+  "main.js": "/index/static/js/main.25c55c22.chunk.js",
+  "main.js.map": "/index/static/js/main.25c55c22.chunk.js.map",
+  "runtime~main.js": "/index/static/js/runtime~main.00652782.js",
+  "runtime~main.js.map": "/index/static/js/runtime~main.00652782.js.map",
+  "static/js/2.0b099c1a.chunk.js": "/index/static/js/2.0b099c1a.chunk.js",
+  "static/js/2.0b099c1a.chunk.js.map": "/index/static/js/2.0b099c1a.chunk.js.map",
+  "index.html": "/index/index.html",
+  "precache-manifest.fa8f6ce4bfbcd4a8d77826d8894af6da.js": "/index/precache-manifest.fa8f6ce4bfbcd4a8d77826d8894af6da.js",
+  "service-worker.js": "/index/service-worker.js",
+  "static/css/main.87818cbf.chunk.css.map": "/index/static/css/main.87818cbf.chunk.css.map",
+  "static/media/uoft.svg": "/index/static/media/uoft.11ec10a5.svg"
 }
