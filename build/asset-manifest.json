@@ -1,14 +1,13 @@
 {
-  "main.css": "/jayesh/static/css/main.87818cbf.chunk.css",
-  "main.js": "/jayesh/static/js/main.f1de52d1.chunk.js",
-  "main.js.map": "/jayesh/static/js/main.f1de52d1.chunk.js.map",
+  "main.css": "/jayesh/static/css/main.0f29e5a5.chunk.css",
+  "main.js": "/jayesh/static/js/main.66d520af.chunk.js",
+  "main.js.map": "/jayesh/static/js/main.66d520af.chunk.js.map",
   "runtime~main.js": "/jayesh/static/js/runtime~main.03e738a9.js",
   "runtime~main.js.map": "/jayesh/static/js/runtime~main.03e738a9.js.map",
-  "static/js/2.0b099c1a.chunk.js": "/jayesh/static/js/2.0b099c1a.chunk.js",
-  "static/js/2.0b099c1a.chunk.js.map": "/jayesh/static/js/2.0b099c1a.chunk.js.map",
+  "static/js/2.f213e47f.chunk.js": "/jayesh/static/js/2.f213e47f.chunk.js",
+  "static/js/2.f213e47f.chunk.js.map": "/jayesh/static/js/2.f213e47f.chunk.js.map",
   "index.html": "/jayesh/index.html",
-  "precache-manifest.b528ddd0e301852869cb5e159fed6fbe.js": "/jayesh/precache-manifest.b528ddd0e301852869cb5e159fed6fbe.js",
+  "precache-manifest.8c15d6d14a4be530ee9e58940d8d69cc.js": "/jayesh/precache-manifest.8c15d6d14a4be530ee9e58940d8d69cc.js",
   "service-worker.js": "/jayesh/service-worker.js",
-  "static/css/main.87818cbf.chunk.css.map": "/jayesh/static/css/main.87818cbf.chunk.css.map",
-  "static/media/uoft.svg": "/jayesh/static/media/uoft.11ec10a5.svg"
+  "static/css/main.0f29e5a5.chunk.css.map": "/jayesh/static/css/main.0f29e5a5.chunk.css.map"
 }
