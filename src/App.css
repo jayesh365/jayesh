@@ -1,61 +1,9 @@
-html {
-  scroll-behavior: smooth;
-}
-
-/* landing page J */
-#jay {
-  font-size: 20em;
-  padding: 0;
-  margin: 0;
-}
-
-/* down arrow */
-.downArrow {
-  display: none;
-}
-
-.App {
-  text-align: center;
-}
-
-/* Landing Page */
-.App-header {
-  background-color: azure;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color:#34495e;
-}
-
-/* About Page */
-.About-header {
-  background-color:  azure;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #34495e;
-}
-
-/* About Blurb */
-#aboutBlurb {
-  display: none;
-  padding-top: 2em;
-  padding-left: 5em;
-  padding-right: 5em;
-}
-
-/* UOfT logo*/
-.container {
-  flex-direction: row;
-}
-#uoft {
- display: block;
- padding-top: 2em;
- height: 50vh;
+.square{
+    color: black;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    opacity: 0.7;
+    border-radius: 15%;
 }
