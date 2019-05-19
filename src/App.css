@@ -1,9 +1,50 @@
-.square{
-    color: black;
+.flex-square{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.left-column{
+    background-color: #1f2833;
+    width: 25%;
+    height: 100vh;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.content{
+    width: 75%;
+    display: felx;
+    margin-top:20%;
+    margin-right: 10%;
+    margin-left:15%;
+    font-size: 1.5rem;
+
+}
+
+.title{
+    color:#66fcf1;
+    text-align: center;
+}
+
+.blurb{
+    color: white;
+    text-align: center;
+    word-wrap: break-word !important;
+    line-height: 2em;
+}
+
+.c-image{
+    border-style:solid;
+    border-width: 5px;
+    border-color: #66fcf1;
     position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: #eee;
-    opacity: 0.7;
-    border-radius: 15%;
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+
+    display: block;
+    margin-top: 40vh;
+    margin-left: 65%;
+    margin-right: auto;
 }
