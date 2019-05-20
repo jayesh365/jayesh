@@ -1,50 +1,88 @@
-.flex-square{
-    display: flex; 
-    justify-content: space-between;
-}
-
-.left-column{
-    background-color: #1f2833;
-    width: 25%;
+html, body{
     height: 100vh;
-    margin-top: 0;
-    margin-left: 0;
-}
-
-.content{
-    width: 75%;
-    display: felx;
-    margin-top:20%;
-    margin-right: 10%;
-    margin-left:15%;
-    font-size: 1.5rem;
-
-}
-
-.title{
-    color:#66fcf1;
-    text-align: center;
-}
-
-.blurb{
-    color: white;
-    text-align: center;
-    word-wrap: break-word !important;
-    line-height: 2em;
-}
-
-.c-image{
-    border-style:solid;
-    border-width: 5px;
-    border-color:rgba(255,69,0,1);
-    position: relative;
-    width: 70%;
-    height: auto;
     overflow: hidden;
-    border-radius: 50%;
+}
 
-    display: block;
-    margin-top: 40vh;
-    margin-left: 65%;
-    margin-right: auto;
+.flex-square {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column {
+  background-color: rgba(31, 40, 51, 0.8);
+  width: 25%;
+  height: 100vh;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.content {
+  width: 75%;
+  display: felx;
+  margin-top: 20%;
+  margin-right: 10%;
+  margin-left: 15%;
+  font-size: 1.5rem;
+}
+
+.title {
+  color: rgba(255, 69, 0, 1);
+  text-align: center;
+}
+
+.grad-line{
+    margin: 25px 0;
+    height: 1px;
+    background: rgba(196, 203, 211, 0.8);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(31, 40, 51, 1)), to(rgba(31, 40, 51, 1)), color-stop(50%, white));
+}
+
+.blurb {
+  color: white;
+  text-align: center;
+  word-wrap: break-word !important;
+  line-height: 2em;
+}
+
+.c-image {
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgba(255, 69, 0, 1);
+  position: relative;
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 50%;
+
+  display: block;
+  margin-top: 15vh;
+  margin-left: 65%;
+  margin-right: auto;
+}
+#row-link-one,
+#row-link-two {
+  margin-left: 35%;
+  margin-right: 25%;
+  margin-top: 30%;
+}
+
+
+.fab,
+.fas {
+  font-size: 5rem;
+  color: rgba(255, 69, 0, 1);
+}
+
+.links {
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+@media only screen and (max-width: 650px) {
+    
+    .fab,
+    .fas {
+      font-size: 3rem;
+      color: rgba(255, 69, 0, 1);
+    }
 }
