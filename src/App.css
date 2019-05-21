@@ -1,6 +1,7 @@
 html, body{
     height: 100vh;
     overflow: hidden;
+    font-family: 'Dosis', sans-serif;
 }
 
 .flex-square {
@@ -18,7 +19,6 @@ html, body{
 
 .content {
   width: 75%;
-  display: felx;
   margin-top: 20%;
   margin-right: 10%;
   margin-left: 15%;
@@ -44,38 +44,49 @@ html, body{
   line-height: 2em;
 }
 
-.c-image {
+#row-image{
+  margin-top: 90%;
+  margin-left: 60%;
+}
+
+#c-image{
+  border-radius: 50%;
   border-style: solid;
   border-width: 5px;
   border-color: rgba(255, 69, 0, 1);
-  position: relative;
-  width: 70%;
-  height: auto;
-  overflow: hidden;
+  vertical-align: middle;
+  width: 200px;
+}
+
+#c-image:hover{
   border-radius: 50%;
-
-  display: block;
-  margin-top: 15vh;
-  margin-left: 65%;
-  margin-right: auto;
-}
-#row-link-one,
-#row-link-two {
-  margin-left: 35%;
-  margin-right: 25%;
-  margin-top: 30%;
+  border-style: solid;
+  border-width: 5px;
+  vertical-align: middle;
+  width: 200px;
+  border-color: aliceblue;  
 }
 
+i{
+  margin-left: 20%;
+}
+
+i:hover{
+  color: aliceblue;
+}
+
+#row-link-one{
+  margin-top: 20%;
+}
+
+#row-link-two{
+  margin-top: 60%;
+}
 
 .fab,
 .fas {
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: rgba(255, 69, 0, 1);
-}
-
-.links {
-  margin-top: 5%;
-  margin-left: 2%;
 }
 
 @media only screen and (max-width: 650px) {

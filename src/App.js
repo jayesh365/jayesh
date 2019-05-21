@@ -7,7 +7,7 @@ import './logo.svg'
 const gitLink = <a href="https://github.com/jayesh365"><Link link="fab fa-github" linkId="git-icon"/></a>
 const linkedLink = <a href="https://www.linkedin.com/in/jayeshkhullar"><Link link="fab fa-linkedin" linkId="linked-icon"/></a>
 const mailLink = <a href="mailto:jayesh.khullar@mail.utoronto.ca"><Link link="fas fa-envelope" linkId="mail-icon"/></a>
-const stackLink = <a href="https://stackoverflow.com/users/4839739/jayesh-khullar"><Link link="fab fa-stack-overflow" linkId="stack-icon"/></a>
+const stackLink = <a href="https://stackoverflow.com/users/4839739/jayesh-khullar"><Link link="fas fa-file-alt" linkId="stack-icon"/></a>
 
 class App extends Component {
 

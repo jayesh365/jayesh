@@ -4,8 +4,10 @@
   "private": true,
   "homepage": "https://jayesh365.github.io/jayesh",
   "dependencies": {
+    "compass-sass-mixins": "^0.12.7",
     "gh-pages": "^2.0.1github",
     "jquery": "^3.3.1",
+    "node-sass": "^4.12.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
