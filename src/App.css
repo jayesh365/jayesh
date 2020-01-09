@@ -40,7 +40,7 @@ html, body{
 }
 
 #icons{
-  margin-left: calc(30%);
+  margin-left: 30vw;
 }
 
 i{
@@ -50,7 +50,7 @@ i{
 .fab,
 .fas {
   font-size: 3.5rem;
-  padding: calc(1em);
+  padding: 1em;
   color: #0e76a8;
 }
 
@@ -60,6 +60,7 @@ i{
 
 #cards{
   display: flex;
+  margin: auto;
 }
 
 .gitCard{
@@ -73,3 +74,21 @@ i{
   background-color: #0e76a8;
 }
 
+@media only screen and (max-width: 900px) {
+  
+  #icons{
+    margin-left: 10vw;
+  }
+
+  #cards{
+    display: flex;
+    flex-direction: column;
+  }
+  .gitCard{
+    text-align: center;
+    border-radius: 1%;
+    margin-top: 2%;
+    width: 90vw;
+    height: 15vh;
+  }
+}

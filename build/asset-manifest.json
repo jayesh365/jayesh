@@ -1,5 +1,5 @@
 {
-  "main.css": "/jayesh/static/css/main.4b07a0f2.chunk.css",
+  "main.css": "/jayesh/static/css/main.1fcc48d9.chunk.css",
   "main.js": "/jayesh/static/js/main.ecd6a6f5.chunk.js",
   "main.js.map": "/jayesh/static/js/main.ecd6a6f5.chunk.js.map",
   "runtime~main.js": "/jayesh/static/js/runtime~main.03e738a9.js",
@@ -7,7 +7,7 @@
   "static/js/2.f213e47f.chunk.js": "/jayesh/static/js/2.f213e47f.chunk.js",
   "static/js/2.f213e47f.chunk.js.map": "/jayesh/static/js/2.f213e47f.chunk.js.map",
   "index.html": "/jayesh/index.html",
-  "precache-manifest.e88a1e001ec12f940403fb4f9484437a.js": "/jayesh/precache-manifest.e88a1e001ec12f940403fb4f9484437a.js",
+  "precache-manifest.c2dfa06f905cf4d6b74fe171820697be.js": "/jayesh/precache-manifest.c2dfa06f905cf4d6b74fe171820697be.js",
   "service-worker.js": "/jayesh/service-worker.js",
-  "static/css/main.4b07a0f2.chunk.css.map": "/jayesh/static/css/main.4b07a0f2.chunk.css.map"
+  "static/css/main.1fcc48d9.chunk.css.map": "/jayesh/static/css/main.1fcc48d9.chunk.css.map"
 }
