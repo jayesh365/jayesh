@@ -66,7 +66,7 @@ class App extends Component {
         pageName="pageTwo"
         title="Projects" 
         divName="githubCards"
-        blurb="Here are some of my previous projects..."
+        blurb="Here are some of my previous projects available on my Github..."
         />
         <div id="cards">
           {cardsOne}
