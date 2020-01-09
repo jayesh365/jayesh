@@ -100,4 +100,7 @@ i{
     width: 90vw;
     height: 15vh;
   }
+  .gitCard:hover{
+    font-size: 1.2em;
+  }
 }
