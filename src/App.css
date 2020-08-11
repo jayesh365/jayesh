@@ -1,106 +1,19 @@
 html, body{
   font-family: 'Dosis', sans-serif;
-  background-color: white;
+  background-color: rgb(46, 40, 40);
   margin: auto;
 }
-.homeDiv, .githubCards {
-  width: 75%;
-  font-size: 1.3em;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
 
-.title {
-  color: black;
-  text-align: center;
-}
-
-.grad-line{
-    margin: 25px 0;
-    height: 1px;
-    background: rgba(196, 203, 211, 0.8);
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(31, 40, 51, 1)), to(rgba(31, 40, 51, 1)), color-stop(50%, white));
-}
 
 .blurb {
-  color: black;
-  text-align: center;
-  word-wrap: break-word !important;
-  line-height: 2em;
-}
-
-.App{
-  margin: 0 auto;
-}
-
-#nav-bar{
-  display: inline-flexbox;
-  font-display: none;
-}
-
-#icons{
-  margin-left: 30vw;
-}
-
-i{
-  padding-left: 2rem;
-  padding-left: 2rem;
-}
-
-.fab,
-.fas {
-  font-size: 3.5rem;
-  padding: 1em;
-  color: #2C3A47;
-}
-
-.fab:hover, .fas:hover{
-  font-size: 3.65rem;
-}
-
-.content{
-  margin: auto;
-}
-
-#cards{
-  display: flex;
-  margin: auto;
-}
-
-.gitCard{
-  border-radius: 5%;
-  padding: 2%;
-  margin: 0 2%;
   color: white;
-  font-size: 1em;
-  width: 250px;
-  height: 250px;
-  background-color: #2C3A47;
   text-align: center;
-}
 
-.gitCard:hover{
-  font-size: 1.4em;
-}
+  font-size: x-large;
 
-@media only screen and (max-width: 900px) {
-  
-  #icons{
-    margin-left: 10vw;
-  }
-
-  #cards{
-    display: flex;
-    flex-direction: column;
-  }
-  .gitCard{
-    border-radius: 1%;
-    margin-top: 2%;
-    width: 90vw;
-    height: 15vh;
-  }
-  .gitCard:hover{
-    font-size: 1.2em;
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
 }

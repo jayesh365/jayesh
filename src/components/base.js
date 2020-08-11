@@ -17,7 +17,6 @@ function Square(props){
                     <div className="content">
                         <div className={props.divName}>{props.content0}
                             <h1 className="title">{props.title}</h1>
-                            <div className="grad-line"></div>
                             <p className="blurb">{props.blurb}</p>
                         </div>                        
                         <div className={props.divName}>{props.content1}</div>
