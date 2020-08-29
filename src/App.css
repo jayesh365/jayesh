@@ -172,7 +172,7 @@ color: #4834d4;
   }
 }
 
-@media only screen and (max-device-width : 600px) {
+@media only screen and (max-device-height : 600px) {
 
 .nav-btn{
   width: min-content;
