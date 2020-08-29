@@ -158,3 +158,34 @@ color: #4834d4;
  }
  
 }
+
+/* iPhone 6 in portrait & landscape */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+  
+  .nav-btn{
+    width: fit-content;
+  }
+
+  .pageTwo{
+    margin-top: 10em;
+    margin-bottom: 10em;
+  }
+}
+
+@media only screen and (max-device-width : 600px) {
+
+.nav-btn{
+  width: min-content;
+  height: min-content;
+}
+.pageTwo, .link {
+margin-top: 5em;
+}
+
+  .nav-btn{
+    width: fit-content;
+  }
+  .round-pic {
+    display: none;
+  }
+}

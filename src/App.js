@@ -10,11 +10,6 @@ function toggle() {
 
   element.classList.toggle("dark-theme");
 
-  const btn = document.querySelector('.dm-btn');
-
-  if (btn.innerHTML==="Dark Mode") btn.innerHTML = "Light Mode";
-  else btn.innerHTML = "Dark Mode";
-
 }
 
 class App extends Component {
@@ -24,14 +19,14 @@ class App extends Component {
       <div className="App">
 
         <div className='nav'>
-          
+
           <div className='nav-title'>
             <h1>Jayesh Khullar</h1>
           </div>
-          
+
           <div className="nav-btn">
             <button variant="light" className='dm-btn' onClick={toggle}>
-              Dark Mode
+              &#9728;
             </button>
           </div>
 
