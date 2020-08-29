@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1f723b76b1240c6e96e6",
-    "url": "/jayesh/static/css/main.def6867b.chunk.css"
+    "revision": "cc04c792ad242449803d",
+    "url": "/jayesh/static/css/main.245d152a.chunk.css"
   },
   {
-    "revision": "1f723b76b1240c6e96e6",
-    "url": "/jayesh/static/js/main.c802f639.chunk.js"
+    "revision": "cc04c792ad242449803d",
+    "url": "/jayesh/static/js/main.9f53b553.chunk.js"
   },
   {
     "revision": "3aecac2e68ca8623dddb",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/jayesh/static/js/2.f213e47f.chunk.js"
   },
   {
-    "revision": "918614c976a0e84723ef7b37b034dcbb",
+    "revision": "69b0b604cc59f0c828d3119bf470b50f",
     "url": "/jayesh/index.html"
   }
 ];
