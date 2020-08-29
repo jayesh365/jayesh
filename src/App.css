@@ -1,19 +1,160 @@
-html, body{
-  font-family: 'Dosis', sans-serif;
-  background-color: rgb(46, 40, 40);
-  margin: auto;
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #dff9fb;
+  font-size: larger;
+  word-break: normal;
+  margin: 0;
+  padding: 0;
 }
 
+body.dark-theme {
+  color: #eee;
+  background: #121212;
+}
+
+body.dark-theme p {
+  color: #eee;
+}
+
+body.dark-theme a {
+  color: #4834d4;
+}
+
+.nav{
+  background-color: #4834d4;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 1
+}
+
+.nav-title{
+  margin: 0 auto;
+  color: #eee;
+}
+
+.nav-btn{
+  margin: auto;
+
+}
+
+button{
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.pageOne, .pageTwo, .outer{
+  height: 100vh;
+}
+
+#content-container, #inner {
+  width: 55%;
+  margin: 0 auto;
+  padding-top: 15em;
+}
+
+.pageTwo .flex-square {
+  flex-direction: row-reverse;
+}
+
+.flex-square {
+  display: flex;
+  flex-direction: row;
+}
+
+#pic{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: #4834d4;
+  border-style: inset;
+  border-radius: 25%;
+}
+
+.title {
+text-align: center;
+color: #4834d4;
+}
 
 .blurb {
-  color: white;
-  text-align: center;
+  color: #535c68;
+  font-size: large;
+  line-height: 2rem;
+  word-wrap: break-word;
+  margin: 0 5rem;
+}
 
-  font-size: x-large;
+.round-pic {
+  border-radius: 25%;
+  width: 200px;
+  height: 200px;
+}
 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+.left-column {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.link {
+  margin-left: 15%;
+  padding-right: 5%;
+}
+
+.l-icon .round-pic{
+  width:80px;
+  position: absolute;
+}
+
+.l-icon .round-pic:hover{
+  width: 100px;
+}
+
+@media only screen and (max-width: 1545px) {
+  
+  body{
+    text-align: center;
+  }
+
+  .flex-square {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content-container{
+    width: auto;
+  }
+
+  .pageTwo .flex-square {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .l-icon .round-pic {
+    width: 80px;
+    position: relative;
+    display: flex;
+    margin: 0 auto; 
+  }
+
+  .left-column {
+    width: auto;
+    margin: 0 auto;
+ }
+
+ img{
+   border: cadetblue;
+ }
+
+ #pic{
+   border: none;
+ }
+ 
 }
