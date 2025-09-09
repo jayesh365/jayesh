@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Jayesh Khullar</title>
+    <meta name="description" content="Personal website of Jayesh Khullar — research, projects, writing, contact." />
+    <meta property="og:title" content="Jayesh Khullar" />
+    <meta property="og:description" content="Research, projects, writing, contact." />
+    <meta property="og:type" content="website" />
+
+    <!-- LaTeX.css (no build, just one line) -->
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
+
+    <!-- Optional: Prism for code blocks (remove if not needed) -->
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+
+    <style>
+      /* tiny helpers; keep it very light to stay "no‑nonsense" */
+      .container { max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
+      header nav a { margin-right: .75rem; }
+      .muted { opacity: .7 }
+      .nowrap { white-space: nowrap }
+      footer { margin-top: 3rem; }
+      .tag { font-size: 0.9rem; padding: 0 .35rem; border: 1px solid #ccc; border-radius: 3px; }
+      .profile-pic { display:block; margin:1rem auto; }
+      @media (max-width: 640px) { .nowrap { white-space: normal } }
+    </style>
+  </head>
+
+  <body class="text-justify" id="top">
+    <div class="container">
+      <header>
+        <h1 class="no-indent" style="margin-bottom: .25rem">Jayesh Khullar</h1>
+        <img src="image.jpg" style="width:50%; height:50%;" alt="Jayesh Khullar" class="profile-pic" />
+        <p class="author">updated <span id="updated"></span></p>
+        <nav aria-label="primary">
+          <a href="#about">about</a>
+          <a href="#research">research</a>
+          <a href="#projects">projects</a>
+          <a href="#writing">writing</a>
+          <a href="#contact">contact</a>
+          <button id="dark-mode-toggle" style="float:right">goodnight</button>
+        </nav>
+        <hr />
+      </header>
+
+      <article class="indent-pars">
+        <section id="about">
+          <h2>about</h2>
+          <p>
+            hi — i’m jayesh. i work on reinforcement learning, option discovery, and
+            analysis of hidden representations in atari agents. i enjoy building
+            clean, reproducible tooling and simple websites like this one.
+          </p>
+          <p class="muted">
+            currently: msc research on temporal abstractions;
+          </p>
+        </section>
+
+        <section id="research">
+          <h2>research</h2>
+          <ul>
+            <li>
+              <strong>natural option discovery</strong> — clustering activations,
+              dwell‑time tests, and behavior n‑grams to reveal temporally extended
+              skills in rl agents.
+            </li>
+            <li>
+              <strong>state‑space models</strong> — structured ssm variants and
+              representation analysis.
+            </li>
+            <li>
+              <strong>tooling</strong> — collectors, decorrelation pipelines, and
+              reproducible viz.
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects">
+          <h2>projects</h2>
+          <ul>
+            <li>
+              <span class="tag">rl</span>
+              option detector — activation collector → dbscan/k‑means → dwell‑time statistics → n‑gram analysis.
+            </li>
+            <li>
+              <span class="tag">hpc</span>
+              singularity + slurm templates for large‑scale experiments on ale tasks.
+            </li>
+          </ul>
+        </section>
+
+        <section id="writing">
+          <h2>writing</h2>
+          <p class="no-indent">selected notes and posts:</p>
+          <ul>
+            <li>Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs</li>
+          </ul>
+
+          <pre><code class="language-python"># tiny snippet
+def softmax(x):
+    import math
+    m = max(x)
+    exps = [math.exp(v - m) for v in x]
+    s = sum(exps)
+    return [v / s for v in exps]</code></pre>
+        </section>
+
+        <section id="contact">
+          <h2>contact</h2>
+          <p>
+            . email: <a href="mailto:jayeshkhullar@gmail.com">jayeshkhullar@gmail.com</a>
+            · github: <a href="https://github.com/jayesh365" target="_blank" rel="noopener">@jayesh365</a>
+            · google scholar: <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Jayesh Khullar</a>
+          </p>
+        </section>
+      </article>
+
+      <footer>
+        <hr />
+        <p class="muted">
+          © <span id="year"></span> jayesh khullar · built with
+          <a href="https://latex.vercel.app/" target="_blank" rel="noopener">LaTeX.css</a>
+        </p>
+        <p class="no-indent"><a href="#top">back to top</a></p>
+      </footer>
+    </div>
+
+    <script>
+      // minimal js: dark mode toggle (per LaTeX.css docs) + timestamps
+      document.querySelector('#dark-mode-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark');
+      });
+      const now = new Date();
+      document.getElementById('year').textContent = now.getFullYear();
+      document.getElementById('updated').textContent = now.toISOString().slice(0, 10);
+    </script>
+  </body>
+</html>
