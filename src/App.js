@@ -52,6 +52,14 @@ class App extends Component {
             use and to support the web apps"
         />
 
+        <Square
+          pageName='pageThree'
+          pic="./bb.png"
+          divName="expDiv"
+          title="Current Position"
+          blurb="I am currently an Open Source Developer Intern at Blackberry Canada's OSPO Department."
+        />
+
         <Links
           pic1='./git.svg'
           linkURL1='https://github.com/jayesh365'
