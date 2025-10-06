@@ -5,116 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Jayesh Khullar</title>
-    <meta name="description" content="Personal website of Jayesh Khullar — research, projects, writing, contact." />
-    <meta property="og:title" content="Jayesh Khullar" />
-    <meta property="og:description" content="Research, projects, writing, contact." />
-    <meta property="og:type" content="website" />
+    <meta name="description" content="Personal website of Jayesh Khullar — research, experience, projects, and contact." />
+    <link rel="canonical" href="https://jayesh365.github.io/jayesh" />
 
-    <!-- LaTeX.css (no build, just one line) -->
+    <!-- Social Cards -->
+    <meta property="og:title" content="Jayesh Khullar" />
+    <meta property="og:description" content="Research, experience, projects, and contact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jayesh365.github.io/jayesh" />
+    <meta property="og:image" content="og-card.jpg" />
+
+    <!-- Color Scheme + Smooth Transition -->
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      :root { --fade: color 160ms ease, background-color 160ms ease; }
+      html, body { transition: var(--fade); }
+      .visually-hidden {
+        position: absolute !important;
+        height: 1px; width: 1px;
+        overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap; border: 0; padding: 0; margin: -1px;
+      }
+    </style>
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://latex.vercel.app" crossorigin>
+
+    <!-- LaTeX.css -->
     <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
 
-    <!-- Optional: Prism for code blocks (remove if not needed) -->
-    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <!-- Keywords for Search -->
+    <meta name="keywords" content="Reinforcement Learning, Options, DQN, PPO, A2C, PyTorch, Stable Baselines3, Gymnasium, DBSCAN, UMAP, Docker, Linux, REST APIs, SPDX, SBOM, W&B, Async I/O" />
 
     <style>
-      /* tiny helpers; keep it very light to stay "no‑nonsense" */
-      .container { max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
-      header nav a { margin-right: .75rem; }
-      .muted { opacity: .7 }
-      .nowrap { white-space: nowrap }
+      .container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem; }
+      header nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+      header .nav-links a { margin-right: 0.75rem; }
+      .muted { opacity: .7; }
       footer { margin-top: 3rem; }
       .tag { font-size: 0.9rem; padding: 0 .35rem; border: 1px solid #ccc; border-radius: 3px; }
-      .profile-pic { display:block; margin:1rem auto; }
-      @media (max-width: 640px) { .nowrap { white-space: normal } }
+      .profile-pic { display:block; margin:1rem auto; width:50%; height:auto; border-radius:8px; }
+      #dark-mode-toggle {
+        padding: 0.35rem 0.8rem;
+        border: none;
+        background: #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background-color 0.2s ease;
+      }
+      #dark-mode-toggle:hover { background-color: #bbb; }
+      #dark-mode-toggle:focus { outline: 2px solid currentColor; outline-offset: 2px; }
+      @media (max-width: 640px) {
+        header nav { flex-direction: column; align-items: flex-start; }
+        .profile-pic { width:70%; }
+      }
     </style>
   </head>
 
-  <body class="text-justify" id="top">
+  <body id="top">
+    <a class="visually-hidden" href="#about">Skip to content</a>
+
     <div class="container">
       <header>
-        <h1 class="no-indent" style="margin-bottom: .25rem">Jayesh Khullar</h1>
-        <img src="image.jpg" style="width:50%; height:50%;" alt="Jayesh Khullar" class="profile-pic" />
-        <p class="author">updated <span id="updated"></span></p>
-        <nav aria-label="primary">
-          <a href="#about">about</a>
-          <a href="#research">research</a>
-          <a href="#projects">projects</a>
-          <a href="#writing">writing</a>
-          <a href="#contact">contact</a>
-          <button id="dark-mode-toggle" style="float:right">goodnight</button>
+        <h1 style="margin-bottom: .25rem">Jayesh Khullar</h1>
+        <img src="image.jpg" width="600" height="600" loading="lazy" decoding="async"
+             alt="Portrait of Jayesh Khullar" class="profile-pic" />
+        <p class="author">Updated <span id="updated"></span></p>
+
+        <nav aria-label="Primary Navigation">
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="resumeHybrid2025.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode">Good Night</button>
         </nav>
         <hr />
       </header>
 
       <article class="indent-pars">
         <section id="about">
-          <h2>about</h2>
+          <h2>About</h2>
           <p>
-            hi — i’m jayesh. i work on reinforcement learning, option discovery, and
-            analysis of hidden representations in atari agents. i enjoy building
-            clean, reproducible tooling and simple websites like this one.
+            Hi, I’m Jayesh, a Computer Scientist based in Toronto with an M.Sc. in Deep Reinforcement Learning.
+            I build reproducible RL research pipelines and analysis tools for option discovery and hidden-representation analysis.
           </p>
-          <p class="muted">
-            currently: msc research on temporal abstractions;
+          <p class="muted">Currently: M.Sc. research on temporal abstractions and option discovery.</p>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li><strong>Queen’s University</strong> — M.Sc., Computer Science (Deep Reinforcement Learning); GPA 4.30/4.30</li>
+            <li><strong>University of Toronto</strong> — Hon. B.Sc., Statistical Machine Learning & Data Mining</li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <p>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">GoLang</span>
+            <span class="tag">Java</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Stable-Baselines3</span>
+            <span class="tag">Gymnasium</span>
+            <span class="tag">NumPy/Pandas</span>
+            <span class="tag">Plotly/Matplotlib</span>
+            <span class="tag">PPO/A2C/DQN</span>
+            <span class="tag">DBSCAN/K-Means/HDBSCAN</span>
+            <span class="tag">PCA/UMAP</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Bash</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">LaTeX</span>
+            <span class="tag">W&B</span>
+            <span class="tag">SPDX/SBOM</span>
           </p>
         </section>
 
-        <section id="research">
-          <h2>research</h2>
+        <section id="experience">
+          <h2>Experience</h2>
           <ul>
             <li>
-              <strong>natural option discovery</strong> — clustering activations,
-              dwell‑time tests, and behavior n‑grams to reveal temporally extended
-              skills in rl agents.
+              <strong>Software Engineer — OSS Consultants</strong> (Aug 2021 – Present)<br />
+              Automated open-source analysis workflows with asynchronous Python + REST APIs; reduced manual review by 200+ hours per release; built Dockerized pipelines and dashboards (Plotly/JS) across 150+ products.
             </li>
             <li>
-              <strong>state‑space models</strong> — structured ssm variants and
-              representation analysis.
+              <strong>Open Source Developer — BlackBerry</strong> (May 2021 – Aug 2021)<br />
+              Created Python CLI utilities for dependency graph analysis; automated license/compliance checks with cached metadata pipelines, saving 100+ analyst hours.
             </li>
             <li>
-              <strong>tooling</strong> — collectors, decorrelation pipelines, and
-              reproducible viz.
+              <strong>Software Developer — UHN / SickKids</strong> (Jan 2019 – Aug 2019)<br />
+              Developed GoLang + BlueJay web applications for clinical reporting; migrated large datasets using MongoDB and MySQL for research access.
             </li>
           </ul>
         </section>
 
         <section id="projects">
-          <h2>projects</h2>
+          <h2>Projects</h2>
           <ul>
             <li>
-              <span class="tag">rl</span>
-              option detector — activation collector → dbscan/k‑means → dwell‑time statistics → n‑gram analysis.
+              <span class="tag">Reinforcement Learning</span>
+              <strong>DCTA Analysis Pipeline — Option Discovery in Deep RL</strong> (2024–2025)<br />
+              Detects temporally extended behaviors via decorrelation → clustering → dwell-time distribution tests; validated on Atari (Seaquest, Ms. Pacman, Breakout, Montezuma’s Revenge) and Four-Room tasks.
             </li>
             <li>
-              <span class="tag">hpc</span>
-              singularity + slurm templates for large‑scale experiments on ale tasks.
+              <span class="tag">ML Infrastructure</span>
+              <strong>Experiment Orchestration & Automation</strong> (2023–2024)<br />
+              Built Dockerized PyTorch workflows for multi-seed training, checkpointing, metric aggregation, and Weights & Biases logging.
+            </li>
+            <li>
+              <span class="tag">Tooling</span>
+              <strong>Release Analytics & Compliance Automation</strong><br />
+              Developed Python services integrating REST APIs and JSON pipelines for large-scale open-source compliance analysis.
             </li>
           </ul>
         </section>
 
-        <section id="writing">
-          <h2>writing</h2>
-          <p class="no-indent">selected notes and posts:</p>
+        <section id="publications">
+          <h2>Publications</h2>
           <ul>
-            <li>Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs</li>
+            <li>Poster: <em>Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs</em>, ICML MOSS Workshop (2025).</li>
           </ul>
-
-          <pre><code class="language-python"># tiny snippet
-def softmax(x):
-    import math
-    m = max(x)
-    exps = [math.exp(v - m) for v in x]
-    s = sum(exps)
-    return [v / s for v in exps]</code></pre>
         </section>
 
         <section id="contact">
-          <h2>contact</h2>
+          <h2>Contact</h2>
           <p>
-            . email: <a href="mailto:jayeshkhullar@gmail.com">jayeshkhullar@gmail.com</a>
-            · github: <a href="https://github.com/jayesh365" target="_blank" rel="noopener">@jayesh365</a>
-            · google scholar: <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Jayesh Khullar</a>
+            Toronto, ON ·
+            Email: <a href="mailto:jayeshkhullar@gmail.com">jayeshkhullar@gmail.com</a> ·
+            GitHub: <a href="https://github.com/jayesh365" target="_blank" rel="noopener">@jayesh365</a> ·
+            Google Scholar: <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Jayesh Khullar</a>
           </p>
         </section>
       </article>
@@ -122,18 +193,54 @@ def softmax(x):
       <footer>
         <hr />
         <p class="muted">
-          © <span id="year"></span> jayesh khullar · built with
+          © <span id="year"></span> Jayesh Khullar · Built with
           <a href="https://latex.vercel.app/" target="_blank" rel="noopener">LaTeX.css</a>
         </p>
-        <p class="no-indent"><a href="#top">back to top</a></p>
+        <p class="no-indent"><a href="#top">Back to top</a></p>
       </footer>
     </div>
 
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jayesh Khullar",
+      "jobTitle": "Computer Scientist",
+      "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+      "url": "https://jayesh365.github.io/jayesh",
+      "sameAs": [
+        "https://github.com/jayesh365",
+        "https://scholar.google.ca/citations?user=L0OMd2oAAAAJ"
+      ]
+    }
+    </script>
+
     <script>
-      // minimal js: dark mode toggle (per LaTeX.css docs) + timestamps
-      document.querySelector('#dark-mode-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('latex-dark');
+      // Theme toggle
+      const KEY = 'theme';
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const saved = localStorage.getItem(KEY);
+      const body = document.body;
+      const btn = document.getElementById('dark-mode-toggle');
+
+      const startDark = saved ? (saved === 'dark') : prefersDark;
+      if (startDark) body.classList.add('latex-dark');
+
+      function syncBtn() {
+        const isDark = body.classList.contains('latex-dark');
+        btn.textContent = isDark ? 'Good Morning' : 'Good Night';
+        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      }
+      syncBtn();
+
+      btn.addEventListener('click', () => {
+        const isDark = body.classList.toggle('latex-dark');
+        localStorage.setItem(KEY, isDark ? 'dark' : 'light');
+        syncBtn();
       });
+
+      // Update timestamps
       const now = new Date();
       document.getElementById('year').textContent = now.getFullYear();
       document.getElementById('updated').textContent = now.toISOString().slice(0, 10);
