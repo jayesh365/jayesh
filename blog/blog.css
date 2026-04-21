@@ -1,0 +1,43 @@
+/* Shared styles for blog post pages — delta on top of latex.vercel.app/style.css */
+
+:root { --fade: color 160ms ease, background-color 160ms ease; }
+html, body { transition: var(--fade); }
+
+.container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem; }
+
+#dark-mode-toggle {
+  padding: 0.35rem 0.8rem;
+  border: none;
+  background: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+#dark-mode-toggle:hover { background-color: #bbb; }
+#dark-mode-toggle:focus { outline: 2px solid currentColor; outline-offset: 2px; }
+
+.post-meta { font-size: 0.9rem; opacity: 0.7; margin-bottom: 2rem; }
+
+/* TL;DR / abstract callout */
+.abstract {
+  border-left: 3px solid currentColor;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  opacity: 0.85;
+}
+
+/* Centered display math (no MathJax — use HTML italic for variables) */
+.eq {
+  display: block;
+  text-align: center;
+  margin: 1.25rem auto;
+  font-style: italic;
+}
+
+.muted { opacity: 0.7; }
+footer { margin-top: 3rem; }
+
+@media (max-width: 640px) {
+  header nav { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

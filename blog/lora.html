@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding LoRA — Jayesh Khullar</title>
+  <meta name="description" content="A walkthrough of LoRA: Low-Rank Adaptation of Large Language Models (Hu et al. 2021)." />
+  <link rel="canonical" href="https://jayesh365.github.io/jayesh/blog/lora.html" />
+
+  <meta property="og:title" content="Understanding LoRA: Low-Rank Adaptation for LLM Finetuning" />
+  <meta property="og:description" content="A walkthrough of LoRA: Low-Rank Adaptation of Large Language Models (Hu et al. 2021)." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jayesh365.github.io/jayesh/blog/lora.html" />
+
+  <meta name="color-scheme" content="light dark" />
+
+  <link rel="preconnect" href="https://latex.vercel.app" crossorigin>
+  <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav aria-label="Site navigation" style="display:flex; justify-content:space-between; align-items:center;">
+        <a href="../index.html">← Jayesh Khullar</a>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">Good Night</button>
+      </nav>
+      <hr />
+    </header>
+
+    <article class="indent-pars">
+      <h1>Understanding LoRA: Low-Rank Adaptation for LLM Finetuning</h1>
+      <div class="post-meta">
+        Jayesh Khullar · <time datetime="2026-04">April 2026</time>
+      </div>
+
+      <div class="abstract">
+        <strong>TL;DR:</strong> Write your TL;DR here — 2–3 sentences capturing the core idea.
+      </div>
+
+      <!-- ------------------------------------------------------------------ -->
+      <!-- Write your post below. Replace or delete any placeholder sections. -->
+      <!-- Tips:
+           - Use <h2> for main sections, <h3> for subsections
+           - Use <em>W</em>, <em>BA</em>, <em>r</em> etc. for math variables (italic)
+           - Use <span class="eq">ΔW = BA</span> for centered display equations
+           - Use <code>peft</code> for inline code
+           - Use <blockquote> for paper quotes
+      -->
+      <!-- ------------------------------------------------------------------ -->
+
+      <h2>The Problem</h2>
+      <p>Write your opening here.</p>
+
+      <h2>The Core Idea</h2>
+      <p>
+        The key equation: <span class="eq"><em>h</em> = <em>W</em>₀<em>x</em> + <em>BAx</em></span>
+        where <em>B</em> ∈ ℝ<sup><em>d</em>×<em>r</em></sup> and <em>A</em> ∈ ℝ<sup><em>r</em>×<em>k</em></sup>, with <em>r</em> ≪ min(<em>d</em>, <em>k</em>).
+      </p>
+
+      <h2>Why It Works</h2>
+      <p>Write your explanation here.</p>
+
+      <h2>Practical Tradeoffs</h2>
+      <p>Write your take on pros and cons here.</p>
+
+      <h2>My Take</h2>
+      <p>Write your personal reflection here.</p>
+
+    </article>
+
+    <footer>
+      <hr />
+      <p class="muted">
+        <a href="../index.html">← Back to main page</a> ·
+        © <span id="year"></span> Jayesh Khullar
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    const KEY = 'theme';
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(KEY);
+    const body = document.body;
+    const btn = document.getElementById('dark-mode-toggle');
+    const startDark = saved ? (saved === 'dark') : prefersDark;
+    if (startDark) body.classList.add('latex-dark');
+    function syncBtn() {
+      const isDark = body.classList.contains('latex-dark');
+      btn.textContent = isDark ? 'Good Morning' : 'Good Night';
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    }
+    syncBtn();
+    btn.addEventListener('click', () => {
+      const isDark = body.classList.toggle('latex-dark');
+      localStorage.setItem(KEY, isDark ? 'dark' : 'light');
+      syncBtn();
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
