@@ -18,6 +18,17 @@
   <link rel="preconnect" href="https://latex.vercel.app" crossorigin>
   <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
   <link rel="stylesheet" href="blog.css" />
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    })"></script>
 </head>
 
 <body>
@@ -42,10 +53,10 @@
 
       <!-- ------------------------------------------------------------------ -->
       <!-- Write your post below. Replace or delete any placeholder sections. -->
-      <!-- Tips:
-           - Use <h2> for main sections, <h3> for subsections
-           - Use <em>W</em>, <em>BA</em>, <em>r</em> etc. for math variables (italic)
-           - Use <span class="eq">ΔW = BA</span> for centered display equations
+      <!-- Math tips (KaTeX):
+           - Inline math:   $W_0 + BA$
+           - Display math:  $$\Delta W = BA$$
+           - Example: $B \in \mathbb{R}^{d \times r}$, $r \ll \min(d, k)$
            - Use <code>peft</code> for inline code
            - Use <blockquote> for paper quotes
       -->
@@ -56,9 +67,10 @@
 
       <h2>The Core Idea</h2>
       <p>
-        The key equation: <span class="eq"><em>h</em> = <em>W</em>₀<em>x</em> + <em>BAx</em></span>
-        where <em>B</em> ∈ ℝ<sup><em>d</em>×<em>r</em></sup> and <em>A</em> ∈ ℝ<sup><em>r</em>×<em>k</em></sup>, with <em>r</em> ≪ min(<em>d</em>, <em>k</em>).
+        The modified forward pass is $h = W_0 x + BAx$, where $B \in \mathbb{R}^{d \times r}$
+        and $A \in \mathbb{R}^{r \times k}$, with $r \ll \min(d, k)$.
       </p>
+      <p>As a display equation: $$\Delta W = BA$$</p>
 
       <h2>Why It Works</h2>
       <p>Write your explanation here.</p>
