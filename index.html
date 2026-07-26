@@ -8,57 +8,197 @@
     <meta name="description" content="Personal website of Jayesh Khullar — research, experience, projects, and contact." />
     <link rel="canonical" href="https://jayesh365.github.io/jayesh" />
 
-    <!-- Social Cards -->
-    <meta property="og:title" content="Jayesh Khullar" />
-    <meta property="og:description" content="Research, experience, projects, and contact." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jayesh365.github.io/jayesh" />
-    <meta property="og:image" content="og-card.jpg" />
+    <!-- Favicon (self-contained SVG monogram) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233B82F6'/%3E%3Ctext x='50' y='52' dy='.35em' text-anchor='middle' font-family='Georgia,serif' font-size='62' font-weight='700' fill='white'%3EJ%3C/text%3E%3C/svg%3E" />
 
-    <!-- Color Scheme + Smooth Transition -->
     <meta name="color-scheme" content="light dark" />
+    <meta name="keywords" content="Reinforcement Learning, Options, DQN, PPO, A2C, PyTorch, Stable Baselines3, Gymnasium, DBSCAN, UMAP, Docker, Linux, REST APIs, SPDX, SBOM, W&B, Async I/O, RAG, ChromaDB, Ollama" />
+
     <style>
-      :root { --fade: color 160ms ease, background-color 160ms ease; }
-      html, body { transition: var(--fade); }
+      /* ---------- Design tokens ---------- */
+      :root {
+        --bg: #FBF7EC;
+        --surface: #FFFDF6;
+        --surface-2: #F4EEDF;
+        --text: #211B16;
+        --muted: #6B6157;
+        --accent: #3B82F6;
+        --accent-strong: #2563EB;
+        --accent-soft: #E4EEFE;
+        --on-accent: #ffffff;
+        --border: #E8E0CF;
+        --shadow: 0 1px 2px rgba(70,50,20,.06), 0 8px 24px rgba(70,50,20,.08);
+        --shadow-lift: 0 2px 6px rgba(70,50,20,.10), 0 16px 40px rgba(70,50,20,.14);
+        --radius: 14px;
+        --maxw: 900px;
+        --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+        --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      :root[data-theme="dark"] {
+        --bg: #17130E;
+        --surface: #201A14;
+        --surface-2: #271F17;
+        --text: #EDE6DB;
+        --muted: #A89B8B;
+        --accent: #8AB4F8;
+        --accent-strong: #AAC8FB;
+        --accent-soft: rgba(138,180,248,.18);
+        --on-accent: #0B1220;
+        --border: #33291F;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.45);
+        --shadow-lift: 0 2px 6px rgba(0,0,0,.4), 0 16px 40px rgba(0,0,0,.55);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme]) {
+          --bg: #17130E; --surface: #201A14; --surface-2: #271F17;
+          --text: #EDE6DB; --muted: #A89B8B; --accent: #8AB4F8; --accent-strong: #AAC8FB;
+          --accent-soft: rgba(138,180,248,.18); --on-accent: #0B1220; --border: #33291F;
+          --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.45);
+          --shadow-lift: 0 2px 6px rgba(0,0,0,.4), 0 16px 40px rgba(0,0,0,.55);
+        }
+      }
+
+      /* ---------- Base ---------- */
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--text);
+        font-family: var(--sans); line-height: 1.65;
+        font-size: 17px; letter-spacing: .1px;
+        transition: background-color .2s ease, color .2s ease;
+      }
+      body::before {
+        content: ""; position: fixed; inset: 0 0 auto 0; height: 320px; z-index: -1;
+        background: radial-gradient(1100px 320px at 15% -60px, var(--accent-soft), transparent 70%);
+        pointer-events: none;
+      }
+      .container { max-width: var(--maxw); margin: 0 auto; padding: 2.2rem 1.25rem 3rem; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+      h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; }
+      p { margin: .5rem 0; }
+      .muted { color: var(--muted); }
+      :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
       .visually-hidden {
-        position: absolute !important;
-        height: 1px; width: 1px;
-        overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
-        white-space: nowrap; border: 0; padding: 0; margin: -1px;
+        position: absolute !important; height: 1px; width: 1px; overflow: hidden;
+        clip: rect(1px,1px,1px,1px); white-space: nowrap; border: 0; padding: 0; margin: -1px;
       }
-    </style>
 
-    <!-- Performance -->
-    <link rel="preconnect" href="https://latex.vercel.app" crossorigin>
-
-    <!-- LaTeX.css -->
-    <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
-
-    <!-- Keywords for Search -->
-    <meta name="keywords" content="Reinforcement Learning, Options, DQN, PPO, A2C, PyTorch, Stable Baselines3, Gymnasium, DBSCAN, UMAP, Docker, Linux, REST APIs, SPDX, SBOM, W&B, Async I/O" />
-
-    <style>
-      .container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem; }
-      header nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
-      header .nav-links a { margin-right: 0.75rem; }
-      .muted { opacity: .7; }
-      footer { margin-top: 3rem; }
-      .tag { font-size: 0.9rem; padding: 0 .35rem; border: 1px solid #ccc; border-radius: 3px; }
-      .profile-pic { display:block; margin:1rem auto; width:50%; height:auto; border-radius:8px; }
-      #dark-mode-toggle {
-        padding: 0.35rem 0.8rem;
-        border: none;
-        background: #ccc;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.85rem;
-        transition: background-color 0.2s ease;
+      /* ---------- Hero ---------- */
+      .hero { display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; }
+      .hero-photo {
+        width: 128px; height: 128px; border-radius: 50%; object-fit: cover;
+        border: 3px solid var(--surface); box-shadow: var(--shadow); flex: 0 0 auto;
       }
-      #dark-mode-toggle:hover { background-color: #bbb; }
-      #dark-mode-toggle:focus { outline: 2px solid currentColor; outline-offset: 2px; }
+      .hero-body { flex: 1 1 320px; min-width: 260px; }
+      .hero h1 { margin: 0 0 .2rem; font-size: 2.5rem; letter-spacing: -.5px; }
+      .hero .tagline { font-size: 1.08rem; color: var(--accent); font-weight: 600; margin: 0; }
+      .hero .loc { margin: .15rem 0 0; }
+      .btn-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; align-items: center; }
+      .btn {
+        display: inline-flex; align-items: center; gap: .4rem;
+        padding: .48rem .85rem; border-radius: 999px; font-size: .92rem; font-weight: 600;
+        border: 1px solid var(--border); background: var(--surface); color: var(--text);
+        cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease;
+      }
+      .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); text-decoration: none; border-color: var(--accent); }
+      .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+      .btn-primary:hover { color: var(--on-accent); }
+      #theme-toggle { margin-left: auto; }
+
+      /* Accent color picker (floating) */
+      .accent-fab {
+        position: fixed; right: 16px; bottom: 16px; z-index: 50;
+        display: flex; align-items: center; gap: .5rem;
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: 999px; padding: .4rem .6rem; box-shadow: var(--shadow);
+      }
+      .accent-fab .label { font-size: .8rem; font-weight: 600; color: var(--muted); }
+      .accent-fab input[type="color"] {
+        width: 28px; height: 28px; padding: 0; border: none; background: none; cursor: pointer;
+        border-radius: 50%;
+      }
+      .accent-fab input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+      .accent-fab input[type="color"]::-webkit-color-swatch { border: 1px solid var(--border); border-radius: 50%; }
+      .accent-fab input[type="color"]::-moz-color-swatch { border: 1px solid var(--border); border-radius: 50%; }
+      .accent-fab button {
+        border: none; background: none; color: var(--muted); cursor: pointer;
+        font-size: 1.05rem; line-height: 1; padding: 3px 5px; border-radius: 6px;
+      }
+      .accent-fab button:hover { color: var(--accent); background: var(--accent-soft); }
+      @media (max-width: 640px) { .accent-fab .label { display: none; } }
+
+      /* ---------- Nav ---------- */
+      nav.anchors { margin: 1.6rem 0 .5rem; display: flex; flex-wrap: wrap; gap: 1.1rem;
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: .7rem 0; }
+      nav.anchors a { color: var(--muted); font-weight: 600; font-size: .93rem; position: relative; }
+      nav.anchors a::after {
+        content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+        background: var(--accent); transition: width .2s ease;
+      }
+      nav.anchors a:hover { color: var(--text); text-decoration: none; }
+      nav.anchors a:hover::after { width: 100%; }
+
+      /* ---------- Sections ---------- */
+      section { margin-top: 2.6rem; }
+      section > h2 { font-size: 1.55rem; margin: 0 0 1rem; }
+      section > h2::after {
+        content: ""; display: block; width: 44px; height: 3px; margin-top: .45rem;
+        background: var(--accent); border-radius: 2px;
+      }
+
+      /* ---------- Cards ---------- */
+      .card {
+        background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+        box-shadow: var(--shadow); padding: 1.15rem 1.25rem;
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      }
+      .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--accent); }
+
+      /* Experience — full-width logo cards */
+      .exp-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+      .job { display: flex; gap: 1rem; align-items: flex-start; }
+      .job .logo {
+        flex: 0 0 auto; width: 56px; height: 56px; border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.18);
+      }
+      .job .role { font-family: var(--serif); font-weight: 700; font-size: 1.12rem; }
+      .job .meta { color: var(--muted); font-size: .9rem; margin: .1rem 0 .5rem; }
+      .job p { margin: 0; }
+
+      /* Projects — responsive grid */
+      .proj-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+      .proj h3 { margin: .5rem 0 .35rem; font-size: 1.1rem; }
+      .proj p { margin: 0; font-size: .96rem; }
+      .chip {
+        display: inline-block; background: var(--accent-soft); color: var(--accent-strong);
+        font-size: .74rem; font-weight: 700; letter-spacing: .3px; text-transform: uppercase;
+        padding: .18rem .5rem; border-radius: 6px;
+      }
+
+      /* Education / Publications lists */
+      .clean-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
+      .clean-list li { padding-left: 1.2rem; position: relative; }
+      .clean-list li::before {
+        content: ""; position: absolute; left: 0; top: .65em; width: 7px; height: 7px;
+        background: var(--accent); border-radius: 50%;
+      }
+
+      /* Contact + footer */
+      #contact .card p { margin: 0; }
+      footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+      footer a { font-weight: 600; }
+
       @media (max-width: 640px) {
-        header nav { flex-direction: column; align-items: flex-start; }
-        .profile-pic { width:70%; }
+        body { font-size: 16px; }
+        .hero { flex-direction: column; text-align: center; }
+        .hero-body { min-width: 0; }
+        .btn-row { justify-content: center; }
+        #theme-toggle { margin-left: 0; }
+        .hero h1 { font-size: 2.1rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; scroll-behavior: auto !important; }
       }
     </style>
   </head>
@@ -67,139 +207,186 @@
     <a class="visually-hidden" href="#about">Skip to content</a>
 
     <div class="container">
-      <header>
-        <h1 style="margin-bottom: .25rem">Jayesh Khullar</h1>
-        <img src="image.jpg" width="600" height="600" loading="lazy" decoding="async"
-             alt="Portrait of Jayesh Khullar" class="profile-pic" />
-        <p class="author">Updated <span id="updated"></span></p>
-
-        <nav aria-label="Primary Navigation">
-          <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="resumeHybrid2025.pdf" target="_blank" rel="noopener">Resume</a>
+      <header class="hero">
+        <img class="hero-photo" src="image.jpg" width="128" height="128" loading="eager" decoding="async"
+             alt="Portrait of Jayesh Khullar" />
+        <div class="hero-body">
+          <h1>Jayesh Khullar</h1>
+          <p class="tagline">Deep RL · LLM/RAG · Research Engineer</p>
+          <p class="loc muted">Toronto, ON · Updated <span id="updated"></span></p>
+          <div class="btn-row">
+            <a class="btn" href="https://github.com/jayesh365" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="btn" href="https://www.linkedin.com/in/jayeshkhullar" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://orcid.org/0009-0004-8779-4612" target="_blank" rel="noopener">ORCID</a>
+            <a class="btn" href="mailto:jayeshkhullar@gmail.com">Email</a>
+            <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+            <button id="theme-toggle" class="btn" aria-label="Toggle dark mode" aria-pressed="false">☾ Dark</button>
           </div>
-          <button id="dark-mode-toggle" aria-label="Toggle dark mode">Good Night</button>
-        </nav>
-        <hr />
+        </div>
       </header>
 
-      <article class="indent-pars">
+      <nav class="anchors" aria-label="Primary Navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+      </nav>
+
+      <main>
         <section id="about">
           <h2>About</h2>
           <p>
             Hi, I’m Jayesh, a Computer Scientist based in Toronto with an M.Sc. in Deep Reinforcement Learning.
-            I build reproducible RL research pipelines and analysis tools for option discovery and hidden-representation analysis.
+            I build reproducible RL research pipelines and analysis tools for option discovery and
+            hidden-representation analysis, and I develop LLM/RAG systems and scalable Python automation.
           </p>
           <p class="muted">Currently: M.Sc. research on temporal abstractions and option discovery.</p>
         </section>
 
         <section id="education">
           <h2>Education</h2>
-          <ul>
-            <li><strong>Queen’s University</strong> — M.Sc., Computer Science (Deep Reinforcement Learning); GPA 4.30/4.30</li>
-            <li><strong>University of Toronto</strong> — Hon. B.Sc., Statistical Machine Learning & Data Mining</li>
+          <ul class="clean-list">
+            <li><strong>Queen’s University</strong> — M.Sc., Computer Science (Deep Reinforcement Learning); GPA 4.30/4.30 · <a href="https://qspace.library.queensu.ca/server/api/core/bitstreams/ce52b2c2-1f04-4d79-bb23-6bcf4e99f0ab/content" target="_blank" rel="noopener">Thesis (PDF)</a></li>
+            <li><strong>University of Toronto</strong> — Hon. B.Sc., Statistical Machine Learning &amp; Data Mining</li>
           </ul>
-        </section>
-
-        <section id="skills">
-          <h2>Skills</h2>
-          <p>
-            <span class="tag">Python</span>
-            <span class="tag">C++</span>
-            <span class="tag">GoLang</span>
-            <span class="tag">Java</span>
-            <span class="tag">SQL</span>
-            <span class="tag">HTML/CSS/JS</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">Stable-Baselines3</span>
-            <span class="tag">Gymnasium</span>
-            <span class="tag">NumPy/Pandas</span>
-            <span class="tag">Plotly/Matplotlib</span>
-            <span class="tag">PPO/A2C/DQN</span>
-            <span class="tag">DBSCAN/K-Means/HDBSCAN</span>
-            <span class="tag">PCA/UMAP</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Bash</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">LaTeX</span>
-            <span class="tag">W&B</span>
-            <span class="tag">SPDX/SBOM</span>
-          </p>
         </section>
 
         <section id="experience">
           <h2>Experience</h2>
-          <ul>
-            <li>
-              <strong>Software Engineer — OSS Consultants</strong> (Aug 2021 – Present)<br />
-              Automated open-source analysis workflows with asynchronous Python + REST APIs; reduced manual review by 200+ hours per release; built Dockerized pipelines and dashboards (Plotly/JS) across 150+ products.
+          <ul class="exp-list">
+            <li class="card">
+              <div class="job">
+                <img class="logo" src="logos/rmc.svg" width="56" height="56" loading="lazy" decoding="async"
+                     alt="Royal Military College of Canada logo" />
+                <div class="job-body">
+                  <div class="role">Research Assistant — Royal Military College of Canada</div>
+                  <div class="meta">Sep 2023 – Present</div>
+                  <p>Ported an autonomous-systems simulation stack to an HPC cluster (Slurm + Singularity) for
+                     large-scale reproducible experiments; co-designed a multi-agent drone simulation with A*
+                     pathfinding; contributed to a TMLR submission on temporal representation in recurrent
+                     networks (SMDP/POMDP/GSMDP). Supervising a 4th-year Computer Science undergraduate research
+                     student.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <strong>Open Source Developer — BlackBerry</strong> (May 2021 – Aug 2021)<br />
-              Created Python CLI utilities for dependency graph analysis; automated license/compliance checks with cached metadata pipelines, saving 100+ analyst hours.
+            <li class="card">
+              <div class="job">
+                <img class="logo" src="logos/oss.svg" width="56" height="56" loading="lazy" decoding="async"
+                     alt="OSS Consultants logo" />
+                <div class="job-body">
+                  <div class="role">Software Engineer / Consultant — OSS Consultants</div>
+                  <div class="meta">Aug 2022 – Jun 2026</div>
+                  <p>Met with and presented to end clients to understand their needs, then designed and delivered
+                     custom solutions like dashboards, REST APIs, and data migrations. Built a custom dashboard letting
+                     analysts audit and compare 150+ client projects, saving 200+ hours of manual review per release
+                     cycle, and migrated 100,000s of records from legacy databases into a consolidated system. Also
+                     built an internal LLM-powered document-review tool using a retrieval-augmented generation
+                     pipeline (ChromaDB, Ollama, Qwen2.5) and automated open-source/SBOM compliance analysis with
+                     async Python.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <strong>Software Developer — UHN / SickKids</strong> (Jan 2019 – Aug 2019)<br />
-              Developed GoLang + BlueJay web applications for clinical reporting; migrated large datasets using MongoDB and MySQL for research access.
+            <li class="card">
+              <div class="job">
+                <img class="logo" src="logos/blackberry.svg" width="56" height="56" loading="lazy" decoding="async"
+                     alt="BlackBerry logo" />
+                <div class="job-body">
+                  <div class="role">Open Source Developer — BlackBerry</div>
+                  <div class="meta">May 2021 – Aug 2021</div>
+                  <p>Built Python CLI tools for dependency-graph analysis across 150+ Maven products; automated
+                     license-compliance review with cached metadata pipelines, saving 100+ analyst hours.</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="job">
+                <img class="logo" src="logos/uhn.svg" width="56" height="56" loading="lazy" decoding="async"
+                     alt="UHN / SickKids logo" />
+                <div class="job-body">
+                  <div class="role">Software Developer — UHN / SickKids</div>
+                  <div class="meta">Jan 2019 – Aug 2019</div>
+                  <p>Developed GoLang + BlueJay web applications for clinical reporting; migrated large datasets
+                     using MongoDB and MySQL for research access.</p>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
 
         <section id="projects">
           <h2>Projects</h2>
-          <ul>
-            <li>
-              <span class="tag">Reinforcement Learning</span>
-              <strong>DCTA Analysis Pipeline — Option Discovery in Deep RL</strong> (2024–2025)<br />
-              Detects temporally extended behaviors via decorrelation → clustering → dwell-time distribution tests; validated on Atari (Seaquest, Ms. Pacman, Breakout, Montezuma’s Revenge) and Four-Room tasks.
-            </li>
-            <li>
-              <span class="tag">ML Infrastructure</span>
-              <strong>Experiment Orchestration & Automation</strong> (2023–2024)<br />
-              Built Dockerized PyTorch workflows for multi-seed training, checkpointing, metric aggregation, and Weights & Biases logging.
-            </li>
-            <li>
-              <span class="tag">Tooling</span>
-              <strong>Release Analytics & Compliance Automation</strong><br />
-              Developed Python services integrating REST APIs and JSON pipelines for large-scale open-source compliance analysis.
-            </li>
-          </ul>
+          <div class="proj-grid">
+            <div class="card proj">
+              <span class="chip">Reinforcement Learning</span>
+              <h3>DCTA Analysis Pipeline — Option Discovery in Deep RL</h3>
+              <p>Detects temporally extended behaviors by decorrelating hidden activations, clustering them, and
+                 running dwell-time distribution tests. Validated on Atari (Seaquest, Ms. Pacman, Breakout,
+                 Montezuma’s Revenge) and Four-Room tasks.</p>
+            </div>
+            <div class="card proj">
+              <span class="chip">LLM / RAG</span>
+              <h3>LLM Document Review &amp; RAG System</h3>
+              <p>Local LLM-powered document review using retrieval-augmented generation, vector search (ChromaDB),
+                 and multi-format ingestion (PDF, CSV, Excel, JSON); evaluated models across accuracy, latency, and
+                 hardware constraints to drive deployment decisions.</p>
+            </div>
+            <div class="card proj">
+              <span class="chip">ML Infrastructure</span>
+              <h3>Experiment Orchestration &amp; Automation</h3>
+              <p>Built Dockerized PyTorch workflows for multi-seed training, checkpointing, metric aggregation,
+                 and Weights &amp; Biases logging.</p>
+            </div>
+          </div>
         </section>
 
         <section id="publications">
-          <h2>Publications</h2>
-          <ul>
-            <li>Poster: <em>Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs</em>, ICML MOSS Workshop (2025).</li>
+          <h2>Publications &amp; Service</h2>
+          <p class="muted">Full list on my
+            <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>.
+          </p>
+          <ul class="clean-list">
+            <li>
+              <em><a href="https://openreview.net/pdf?id=czh7BWEvSE" target="_blank" rel="noopener">Detecting temporal abstractions</a></em>,
+              RLC Continual RL Workshop (2026).
+            </li>
+            <li>
+              <em>Temporal representation and inter-stimulus interval coding in recurrent networks</em>,
+              under review, TMLR (2026).
+            </li>
+            <li>
+              <em><a href="https://arxiv.org/pdf/2508.07395" target="_blank" rel="noopener">Parity Requires Unified Input Dependence and Negative Eigenvalues in SSMs</a></em>,
+              ICML MOSS Workshop (2025).
+            </li>
+            <li class="muted">Peer Reviewer — Reinforcement Learning Conference (RLC), 2026.</li>
           </ul>
         </section>
 
-
-
         <section id="contact">
           <h2>Contact</h2>
-          <p>
-            Toronto, ON ·
-            Email: <a href="mailto:jayeshkhullar@gmail.com">jayeshkhullar@gmail.com</a> ·
-            GitHub: <a href="https://github.com/jayesh365" target="_blank" rel="noopener">@jayesh365</a> ·
-            Google Scholar: <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Jayesh Khullar</a>
-          </p>
+          <div class="card">
+            <p>
+              Toronto, ON ·
+              Email: <a href="mailto:jayeshkhullar@gmail.com">jayeshkhullar@gmail.com</a> ·
+              GitHub: <a href="https://github.com/jayesh365" target="_blank" rel="noopener">@jayesh365</a> ·
+              LinkedIn: <a href="https://www.linkedin.com/in/jayeshkhullar" target="_blank" rel="noopener">/jayeshkhullar</a> ·
+              Google Scholar: <a href="https://scholar.google.ca/citations?user=L0OMd2oAAAAJ&hl=en" target="_blank" rel="noopener">Jayesh Khullar</a> ·
+              ORCID: <a href="https://orcid.org/0009-0004-8779-4612" target="_blank" rel="noopener">0009-0004-8779-4612</a>
+            </p>
+          </div>
         </section>
-      </article>
+      </main>
 
       <footer>
-        <hr />
-        <p class="muted">
-          © <span id="year"></span> Jayesh Khullar · Built with
-          <a href="https://latex.vercel.app/" target="_blank" rel="noopener">LaTeX.css</a>
-        </p>
-        <p class="no-indent"><a href="#top">Back to top</a></p>
+        <p>© <span id="year"></span> Jayesh Khullar · <a href="#top">Back to top ↑</a></p>
       </footer>
+    </div>
+
+    <div class="accent-fab" role="group" aria-label="Accent color">
+      <span class="label">Accent</span>
+      <input type="color" id="accent-input" value="#3B82F6" aria-label="Pick accent color" title="Pick accent color" />
+      <button id="accent-reset" type="button" title="Reset to default color" aria-label="Reset accent color">⟲</button>
     </div>
 
     <!-- Schema -->
@@ -213,36 +400,85 @@
       "url": "https://jayesh365.github.io/jayesh",
       "sameAs": [
         "https://github.com/jayesh365",
-        "https://scholar.google.ca/citations?user=L0OMd2oAAAAJ"
+        "https://www.linkedin.com/in/jayeshkhullar",
+        "https://scholar.google.ca/citations?user=L0OMd2oAAAAJ",
+        "https://orcid.org/0009-0004-8779-4612"
       ]
     }
     </script>
 
     <script>
-      // Theme toggle
+      // Theme toggle (persists in localStorage; falls back to prefers-color-scheme)
       const KEY = 'theme';
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const root = document.documentElement;
+      const btn = document.getElementById('theme-toggle');
       const saved = localStorage.getItem(KEY);
-      const body = document.body;
-      const btn = document.getElementById('dark-mode-toggle');
+      if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
 
-      const startDark = saved ? (saved === 'dark') : prefersDark;
-      if (startDark) body.classList.add('latex-dark');
-
+      function isDark() {
+        const t = root.getAttribute('data-theme');
+        if (t) return t === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
       function syncBtn() {
-        const isDark = body.classList.contains('latex-dark');
-        btn.textContent = isDark ? 'Good Morning' : 'Good Night';
-        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        const dark = isDark();
+        btn.textContent = dark ? '☀ Light' : '☾ Dark';
+        btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
       }
       syncBtn();
 
+      // Accent color picker — recolors the amber accent live, keeps the ink text, persists choice
+      const ACCENT_KEY = 'accent';
+      const DEFAULT_ACCENT = '#3B82F6';
+      const accentInput = document.getElementById('accent-input');
+      const accentReset = document.getElementById('accent-reset');
+
+      const hexToRgb = (hex) => {
+        hex = hex.replace('#', '');
+        if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+        const n = parseInt(hex, 16);
+        return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+      };
+      const rgba = (hex, a) => { const [r, g, b] = hexToRgb(hex); return `rgba(${r},${g},${b},${a})`; };
+      const shade = (hex, pct) => {
+        const f = pct / 100;
+        const adj = (c) => Math.round(f >= 0 ? c + (255 - c) * f : c * (1 + f));
+        return '#' + hexToRgb(hex).map(c => adj(c).toString(16).padStart(2, '0')).join('');
+      };
+      const luminance = (hex) => {
+        const [r, g, b] = hexToRgb(hex).map(c => { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); });
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      };
+      function applyAccent(hex) {
+        root.style.setProperty('--accent', hex);
+        root.style.setProperty('--accent-soft', rgba(hex, 0.16));
+        root.style.setProperty('--accent-strong', shade(hex, isDark() ? 16 : -14));
+        root.style.setProperty('--on-accent', luminance(hex) > 0.5 ? '#1a1512' : '#ffffff');
+        accentInput.value = hex;
+      }
+      function resetAccent() {
+        ['--accent', '--accent-soft', '--accent-strong', '--on-accent'].forEach(v => root.style.removeProperty(v));
+        localStorage.removeItem(ACCENT_KEY);
+        accentInput.value = DEFAULT_ACCENT;
+      }
+      const savedAccent = localStorage.getItem(ACCENT_KEY);
+      if (savedAccent) applyAccent(savedAccent);
+      accentInput.addEventListener('input', (e) => {
+        applyAccent(e.target.value);
+        localStorage.setItem(ACCENT_KEY, e.target.value);
+      });
+      accentReset.addEventListener('click', resetAccent);
+
       btn.addEventListener('click', () => {
-        const isDark = body.classList.toggle('latex-dark');
-        localStorage.setItem(KEY, isDark ? 'dark' : 'light');
+        const dark = !isDark();
+        root.setAttribute('data-theme', dark ? 'dark' : 'light');
+        localStorage.setItem(KEY, dark ? 'dark' : 'light');
         syncBtn();
+        const a = localStorage.getItem(ACCENT_KEY);
+        if (a) applyAccent(a); // recompute shade + contrast for the new theme
       });
 
-      // Update timestamps
+      // Timestamps
       const now = new Date();
       document.getElementById('year').textContent = now.getFullYear();
       document.getElementById('updated').textContent = now.toISOString().slice(0, 10);
